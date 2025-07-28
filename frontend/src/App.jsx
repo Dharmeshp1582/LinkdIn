@@ -14,7 +14,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={userData ?<Home/>: <Navigate to="/login"/>}/>
         <Route path='/login' element={userData? <Navigate to="/"/>: <Login/>}/>
-        <Route path='/signup' element={userData ? <Navigate to="/signup"/> : <Signup/>}/>
+        <Route path='/signup' element={userData ? <Navigate to="/"/> : <Signup/>}/>
       </Routes>
     </>
   )

@@ -46,6 +46,9 @@ export const signUp = async (req, res) => {
       .json({ message: "User created successfully", user: newUser, token });
   } catch (error) {
     console.log(error);
+    if (error.code === 11000) {
+    console.log("Duplicate email or username");
+  }
     res.status(500).json({ message: "Internal server error" });
   }
 };

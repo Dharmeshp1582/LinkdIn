@@ -8,6 +8,8 @@ const UserContext = ({ children }) => {
 
   const [userData,setUserData] = useState(null)
   const {serverUrl} = useContext(authDataContext)
+    const [edit,setEdit] = useState(false)
+  
 
   const getCurrentUser = async ()=> {
     try {
@@ -27,7 +29,7 @@ const UserContext = ({ children }) => {
   },[])
 
   const value={
-    userData,setUserData
+    userData,setUserData,edit,setEdit
   }
 
 

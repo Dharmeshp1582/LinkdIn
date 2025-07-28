@@ -50,6 +50,7 @@ const userSchema = new mongoose.Schema(
     ],
     location: {
       type: String,
+      default:"India"
     },
     gender: {
       type: String,
@@ -57,7 +58,7 @@ const userSchema = new mongoose.Schema(
     },
     experience: [
       {
-        type: { type: String },
+        title: { type: String },
         company: { type: String },
         description: { type: String },
       },
